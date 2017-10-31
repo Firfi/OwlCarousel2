@@ -64,19 +64,18 @@
 
 	if (tests.csstransitions()) {
 		/* jshint -W053 */
-		$.support.transition = new String(prefixed('transition'))
-		$.support.transition.end = events.transition.end[ $.support.transition ];
+		$.support.transition = $.support.transition || {};
+		$.support.transition.end = events.transition.end[ new String(prefixed('transition')) ];
 	}
 
 	if (tests.cssanimations()) {
 		/* jshint -W053 */
-		$.support.animation = new String(prefixed('animation'))
-		$.support.animation.end = events.animation.end[ $.support.animation ];
+		$.support.animation = $.support.animation || {};
+		$.support.animation.end = events.animation.end[ new String(prefixed('animation')) ];
 	}
 
 	if (tests.csstransforms()) {
 		/* jshint -W053 */
-		$.support.transform = new String(prefixed('transform'));
 		$.support.transform3d = tests.csstransforms3d();
 	}
 
