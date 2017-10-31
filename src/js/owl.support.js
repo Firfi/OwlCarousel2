@@ -62,21 +62,25 @@
 		return test(property, true);
 	}
 
-	if (tests.csstransitions()) {
+    if (tests.csstransitions()) {
 		/* jshint -W053 */
-		$.support.transition = $.support.transition || {};
-		$.support.transition.end = events.transition.end[ new String(prefixed('transition')) ];
-	}
+        $.support.transition = $.support.transition || {};
+        if (!$.support.transition.end) {
+            $.support.transition.end = events.transition.end[ new String(prefixed('transition')) ];
+        }
+    }
 
-	if (tests.cssanimations()) {
+    if (tests.cssanimations()) {
 		/* jshint -W053 */
-		$.support.animation = $.support.animation || {};
-		$.support.animation.end = events.animation.end[ new String(prefixed('animation')) ];
-	}
+        $.support.animation = $.support.animation || {};
+        if (!$.support.animation.end) {
+            $.support.animation.end = events.animation.end[ new String(prefixed('animation')) ];
+        }
+    }
 
-	if (tests.csstransforms()) {
+    if (tests.csstransforms()) {
 		/* jshint -W053 */
-		$.support.transform3d = tests.csstransforms3d();
-	}
+        $.support.transform3d = tests.csstransforms3d();
+    }
 
 })(window.Zepto || window.jQuery, window, document);
