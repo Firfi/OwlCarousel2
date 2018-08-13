@@ -1,3 +1,9 @@
+Rebild due to unmaintained original. We use two forks here:
+
+samturrell/OwlCarousel2 to un-break bootstrap animations
+
+cubicltd/OwlCarousel2 to un-break grunt builds
+
 # Owl Carousel 2
 
 Touch enabled [jQuery](https://jquery.com/) plugin that lets you create a beautiful, responsive carousel slider. **To get started, check out https://owlcarousel2.github.io/OwlCarousel2/.**
